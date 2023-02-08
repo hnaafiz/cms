@@ -1,16 +1,19 @@
 <?php session_start(); 
 
+include('./core/setting.php');
 
 if(isset($_SESSION['is_authorized'])){
 
     if($_SESSION['is_authorized']==true){
 
-        header("Location: http://class.test/admin");
+        header("Location: ".$base_url."/admin");
 
     }
 }
-
+ 
 ?>
+
+
 
 <!doctype html>
 <html lang="en">
@@ -127,7 +130,7 @@ body {
   
               $_SESSION['is_authorized'] = true;
   
-              header("Location: http://class.test/admin");
+              header("Location: ".$base_url."/admin");
   
         }else{
 

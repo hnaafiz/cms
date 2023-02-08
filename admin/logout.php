@@ -1,5 +1,8 @@
 <?php 
+include('../core/setting.php');
+
 session_start(); 
 session_destroy();
-header("Location: http://class.test/login.php");
+
+header("Location: ".$base_url."/login.php");
 ?>
