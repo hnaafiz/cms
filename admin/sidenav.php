@@ -8,7 +8,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" >
               <span data-feather="file" class="align-text-bottom"></span>
               Posts
             </a>
@@ -20,7 +20,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/admin?module=users&action=users_list">
               <span data-feather="users" class="align-text-bottom"></span>
               Users
             </a>

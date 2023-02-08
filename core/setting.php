@@ -1,4 +1,2 @@
-<?php 
-$base_url = 'http://class.test';
+<?php $base_url = 'http://class.test'; ?>
 
-?>
