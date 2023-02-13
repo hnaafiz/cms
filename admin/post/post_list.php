@@ -1,6 +1,6 @@
 <?php
 
-$sql = "SELECT * from users";
+$sql = "SELECT * from post";
 $result = mysqli_query($conn, $sql);
 
 ?>
@@ -9,7 +9,7 @@ $result = mysqli_query($conn, $sql);
         <h1 class="h2">Users</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
-                <a href="?module=users&action=users_form" class="btn btn-sm btn-outline-primary">Create Users</a>
+                <a href="?module=category&action=category_form" class="btn btn-sm btn-outline-primary">Add category</a>
 
             </div>
 
@@ -21,10 +21,12 @@ $result = mysqli_query($conn, $sql);
             <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Role</th>
-                <th scope="col">Action</th>
+                <th scope="col">Title</th>
+                <th scope="col">user id</th>
+                <th scope="col">category id</th>
+                <th scope="col">status</th>
+                <th scope="col">created date</th>
+                <th scope="col">type</th>
             </tr>
             </thead>
             <tbody>
@@ -34,13 +36,16 @@ $result = mysqli_query($conn, $sql);
                 <?php
                 while ($row = mysqli_fetch_assoc($result)) { ?>
                     <tr>
-                        <td><?php echo $row['userID']; ?></td>
-                        <td><?php echo $row['name']; ?></td>
-                        <td><?php echo $row['email']; ?></td>
-                        <td><?php echo $row['role']; ?></td>
+                        <td><?php echo $row['id']; ?></td>
+                        <td><?php echo $row['title']; ?></td>
+                        <td><?php echo $row['user_id']; ?></td>
+                        <td><?php echo $row['category_id']; ?></td>
+                        <td><?php echo $row['status']; ?></td>
+                        <td><?php echo $row['created_date']; ?></td>
+                        <td><?php echo $row['type']; ?></td>
                         <td>
-                            <a href="?module=users&action=users_update"  class="m-3 text-success">edit</a> 
-                            <a  href="?module=users&action=user_delete" class="m-3 text-danger">delete</a>
+                            <a href="" class="m-3 text-success">edit</a> 
+                            <a href="" class="m-3 text-danger">delete</a>
                         </td>
                       
 
